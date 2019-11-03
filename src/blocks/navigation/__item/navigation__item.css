@@ -1,0 +1,16 @@
+@import url(./_activ/navigation__item_activ.css);
+
+.navigation__item {
+  margin: 0;
+  height: calc(100%-3px);
+  margin-left: 34px;
+  vertical-align: middle;
+  padding-top: 30px;
+
+  color: #B6BCBF;
+}
+
+.navigation__item:hover {
+
+  color: #ffffff;
+}

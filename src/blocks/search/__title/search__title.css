@@ -1,0 +1,10 @@
+.search__title {
+  width: 42%;
+  margin: 0 auto;
+  padding-top: 80px;
+
+  color: white;
+  /*font-family: 'Roboto Slab';*/
+  font-size: 60px;
+  line-height: 64px;
+}

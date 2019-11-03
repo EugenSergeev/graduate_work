@@ -18,9 +18,9 @@ module.exports = {
                 test: /\.css$/i,
                 use: [
                     (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-                    'css-loader', 
+                    'css-loader',
                     'postcss-loader'
-                ]   
+                ]
             },{
             test: /\.(gif|png|jpe?g|svg)$/i,
                 use: [
@@ -48,23 +48,25 @@ module.exports = {
                         }
                     },
                 ],
-            }, {
-                test: /\.(png|jpe?g|gif)$/i,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            outputPath: 'images',
-                            name: '[name].[ext]'
-                        },
-                    },
-                ],
-            },{ 
+            },
+            //  {
+            //     test: /\.(png|jpe?g|gif)$/i,
+            //     use: [
+            //         {
+            //             loader: 'file-loader',
+            //             options: {
+            //                 outputPath: 'images',
+            //                 name: '[name].[ext]'
+            //             },
+            //         },
+            //     ],
+            // },
+            {
                 test: /\.js$/,
-                use: { 
-                    loader: "babel-loader" 
+                use: {
+                    loader: "babel-loader"
                 },
-                exclude: /node_modules/ 
+                exclude: /node_modules/
             },{
                 test: /\.(eot|ttf|woff|woff2)$/,
                 loader: 'file-loader?name=./vendor/[name].[ext]'
@@ -91,10 +93,27 @@ module.exports = {
             {
                 inject: false,
                 template: './src/index.html',
-                filename: 'index.html'
+                filename: 'index.html',
+                chunks: ['main']
             }
         ),
+        new HtmlWebpackPlugin(
+          {
+              template: './src/about.html',
+              filename: 'about.html',
+              chunks: ['exampleEntry']
+          }
+        ),
+        new HtmlWebpackPlugin(
+          {
+              template: './src/analitics.html',
+              filename: 'analitics.html',
+              chunks: ['exampleEntry']
+          }
+        ),
+
         new WebpackMd5Hash(),
+   //     new FaviconsWebpackPlugin('/src/path/to/logo.png'),
         new webpack.DefinePlugin(
             {
                 'NODE_ENV': JSON.stringify(process.env.NODE_ENV)

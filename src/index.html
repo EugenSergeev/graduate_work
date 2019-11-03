@@ -3,13 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Поиск и анализ новостных лент">
+  <meta name="keywords" content="news, analize">
+  <meta name="author" content="Сергеев Евгений">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+  <title>Что в мире творится?</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+
 </head>
 <body>
-  <h1>Проектная работа</h1>
-  <h2>Евгений Сергеев</h2>
+  <div class="root">
+    <header class="header">
+      <div class="header__bg"></div>
+      <div class="header__logo">NewsAnalizer</div>
+      <nav class="navigation">
+        <p class="navigation__item navigation__item_activ">Главная</p>
+        <p class="navigation__item">О проекте</p>
+      </nav>
+    </header>
+    <main class="content">
+<!--SEARCH-->
+      <article class="search">
+        <h1 class="search__title">Что в мире творится?</h1>
+        <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+        <section class="search-string"></section>
+          <div class="search-string__field">Поисковая строка</div>
+          <button class="search-string__button">Искать</button>
+        </section>
+<!--PRELOADER-->
+        <section class="preloader">
+          <i class ="preloader__circle"></i>
+          <p class="preloader__text">Идет поиск новостей...</p>
+        </section>
+<!--NORESULT-->
+        <section class="noresult-search">
+          <div class="noresult-search__image"></div>
+          <h3 class="noresult-search__title">Ничего не найдено</h3>
+          <p class="noresult-search__text">К сожалению по вашему запросу ничего не найдено.</p>
+        </section>
+
+        <section class="search-answer">
+          <h2 class="serch-answer__title">Результаты поиска</h2>
+          <a href="./analitics.html" class="search-answer__analitics-link">Посмотреть аналитику</a>
+          <div class="news-container">
+            <div class="news-item">
+              <div class="news-item__image"></div>
+              <div class="news-item__date">2 августа, 2019</div>
+              <h4 class="news-item__title">Национальное достояние – парки</h4>
+              <p class="news-item__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+              <a href="#" class="news-item__link">Лента.ру</a>
+            </div>
+            <div class="news-item">
+              <div class="news-item__image"></div>
+              <div class="news-item__date">2 августа, 2019</div>
+              <h4 class="news-item__title">Лесные огоньки: история одной фотографии</h4>
+              <p class="news-item__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+              <a href="#" class="news-item__link">Медуза</a>
+            </div>
+            <div class="news-item">
+              <div class="news-item__image"></div>
+              <div class="news-item__date">2 августа, 2019</div>
+              <h4 class="news-item__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
+              <p class="news-item__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+              <a href="#" class="news-item__link">Риа</a>
+            </div>
+            <div class="news-item">
+              <div class="news-item__image"></div>
+              <div class="news-item__date">2 августа, 2019</div>
+              <h4 class="news-item__title">Национальное достояние – парки</h4>
+              <p class="news-item__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+              <a href="#" class="news-item__link">Дзен</a>
+            </div>
+            <div class="news-item">
+              <div class="news-item__image"></div>
+              <div class="news-item__date">2 августа, 2019</div>
+              <h4 class="news-item__title">Лесные огоньки: история одной фотографии</h4>
+              <p class="news-item__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+                  из местных чудес природы.</p>
+              <a href="#" class="news-item__link">Афиша</a>
+            </div>
+            <div class="news-item">
+              <div class="news-item__image"></div>
+              <div class="news-item__date">2 августа, 2019</div>
+              <h4 class="news-item__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
+              <p class="news-item__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+              <a href="#" class="news-item__link">Медиазона</a>
+            </div>
+          </div>
+        </section>
+      </article>
+      <article class="about-author">
+        <div class="about-author__image">
+          <img src="https://sun9-40.userapi.com/c840125/v840125598/5c88b/V6GqWiqJaWE.jpg?ava=1" alt="летящий на закате орёл">
+          <h3 class="about-author__title">Об авторе</h3>
+          <div class="about-author__text-container">
+            <p class="about-author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+            <p class="about-author__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="footer__copyright">© 2019  Supersite</div>
+      <div class="footer_links">
+        <a href="./index.html" class="footer__link">Главная</a>
+        <a href="./about.html" class="footer__link">О проекте</a>
+        <a href="https://praktikum.yandex.ru" class="footer__link">Яндекс.Практикум</a>
+      </div>
+      <div class="footer__social">
+        <a href="https://github.com/EugenSergeev" class="footer__social-link"><img src="./images/social/github.svg" alt=""></a>
+        <a href="#" class="footer__social-link"><img src="./images/social/fb.svg" alt="">
+        </a>
+      </div>
+    </footer>
+  </div>
   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>

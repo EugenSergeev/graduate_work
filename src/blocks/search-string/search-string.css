@@ -1,0 +1,16 @@
+@import url(./__field/search-string__field.css);
+@import url(./__button/search-string__button.css);
+
+.search-string {
+  margin: 64px auto 60px;
+  width: 608px;
+  height: 64px;
+  background-color: white;
+  border-radius: 100px;
+  border: hidden;
+  outline:none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}

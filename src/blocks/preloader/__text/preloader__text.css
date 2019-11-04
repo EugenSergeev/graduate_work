@@ -1,12 +1,11 @@
-.search__subtitle {
-  width: 608px;
+.preloader__text {
+  padding: 26px 0  80px;
   margin: 0 auto;
-  padding-top: 32px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
-  color: #FFFFFF;
-  }
+  text-align: center;
+  color: #B6BCBF;
+}

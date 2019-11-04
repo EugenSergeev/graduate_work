@@ -1,24 +1,20 @@
 .preloader__circle {
 	display: block;
-	width: 50px;
-	height: 50px;
-	border: 4px solid rgb(7, 65, 24);
-	border-bottom-color: rgb(225, 228, 38);
-
+	width: 75px;
+  height: 75px;
+  border: none;
 	border-radius: 50%;
+  background-image: url(../../../images/Ellipse.png);
+  background-repeat: no-repeat;
+  background-position: center;
 
-	/* position:
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0; */
-	margin: 0 auto;
+	margin: auto;
 
-	animation: spin 5.75s infinite linear;
+	animation: spin 1.75s infinite linear;
 }
 
 @keyframes spin {
 	100% {
-		transform: rotate(360deg);
+		transform: rotate(-360deg);
 	}
 }

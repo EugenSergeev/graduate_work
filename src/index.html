@@ -25,25 +25,25 @@
 <!--SEARCH-->
       <article class="search">
         <h1 class="search__title">Что в мире творится?</h1>
-        <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
-        <section class="search-string"></section>
-          <div class="search-string__field">Поисковая строка</div>
+        <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной <br />она была в новостях за прошедшую неделю.</p>
+        <form class="search-string">
+          <input type="text" required class="search-string__field" placeholder="Введите тему">
           <button class="search-string__button">Искать</button>
-        </section>
+        </form>
 <!--PRELOADER-->
         <section class="preloader">
           <i class ="preloader__circle"></i>
           <p class="preloader__text">Идет поиск новостей...</p>
         </section>
 <!--NORESULT-->
-        <section class="noresult-search">
-          <div class="noresult-search__image"></div>
-          <h3 class="noresult-search__title">Ничего не найдено</h3>
-          <p class="noresult-search__text">К сожалению по вашему запросу ничего не найдено.</p>
+        <section class="answer-noresult">
+          <div class="answer-noresult__image"></div>
+          <h3 class="answer-noresult__title">Ничего не найдено</h3>
+          <p class="answer-noresult__text">К сожалению по вашему запросу <br> ничего не найдено.</p>
         </section>
 
         <section class="search-answer">
-          <h2 class="serch-answer__title">Результаты поиска</h2>
+          <h2 class="search-answer__title">Результаты поиска</h2>
           <a href="./analitics.html" class="search-answer__analitics-link">Посмотреть аналитику</a>
           <div class="news-container">
             <div class="news-item">
@@ -111,8 +111,8 @@
         <a href="https://praktikum.yandex.ru" class="footer__link">Яндекс.Практикум</a>
       </div>
       <div class="footer__social">
-        <a href="https://github.com/EugenSergeev" class="footer__social-link"><img src="./images/social/github.svg" alt=""></a>
-        <a href="#" class="footer__social-link"><img src="./images/social/fb.svg" alt="">
+        <a href="https://github.com/EugenSergeev" class="footer__social-link"><img src="<%=require('./images/github.png')%>" alt="github link"></a>
+        <a href="#" class="footer__social-link"><img src="<%=require('./images/fb.png')%>" alt="facebook link">
         </a>
       </div>
     </footer>

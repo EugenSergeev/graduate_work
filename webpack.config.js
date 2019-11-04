@@ -48,20 +48,7 @@ module.exports = {
                         }
                     },
                 ],
-            },
-            //  {
-            //     test: /\.(png|jpe?g|gif)$/i,
-            //     use: [
-            //         {
-            //             loader: 'file-loader',
-            //             options: {
-            //                 outputPath: 'images',
-            //                 name: '[name].[ext]'
-            //             },
-            //         },
-            //     ],
-            // },
-            {
+            },{
                 test: /\.js$/,
                 use: {
                     loader: "babel-loader"
@@ -69,7 +56,7 @@ module.exports = {
                 exclude: /node_modules/
             },{
                 test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=./vendor/[name].[ext]'
+                loader: 'file-loader?name=./vendor/fonts/[name].[ext]'
             }
         ]
     },

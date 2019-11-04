@@ -1,0 +1,11 @@
+.search-string__button {
+  width: 186px;
+  background: #2F71E5;
+  border: hidden;
+  border-radius: 100px;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}

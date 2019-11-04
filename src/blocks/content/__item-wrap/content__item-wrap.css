@@ -1,0 +1,7 @@
+.content__item-wrap {
+  height: 230px;
+  padding: 20px 24px 54px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}

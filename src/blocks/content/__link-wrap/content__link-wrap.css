@@ -1,0 +1,4 @@
+.content__link-wrap {
+  grid-area: link;
+  margin-top: 22px;
+}

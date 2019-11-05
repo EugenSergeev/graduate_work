@@ -17,8 +17,8 @@
       <div class="header__bg"></div>
       <div class="header__logo">NewsAnalizer</div>
       <nav class="navigation">
-        <p class="navigation__item navigation__item_activ">Главная</p>
-        <p class="navigation__item">О проекте</p>
+        <a class="navigation__item navigation__item_activ">Главная</a>
+        <a class="navigation__item">О проекте</a>
       </nav>
     </header>
     <main class="main">
@@ -44,7 +44,7 @@
 
         <section class="content">
           <h2 class="content__title">Результаты поиска</h2>
-          <a href="./analitics.html" class="content__link">Посмотреть аналитику ></a>
+          <div  class="content__link-wrap"><a href="./analitics.html" class="content__link">Посмотреть аналитику <img src="<%=require('./images/back.png')%>" alt="переход по ссылке"></a></div>
           <div class="content__container">
             <div class="content__item">
               <div class="content__image"><img src="<%=require('./images/image.png')%>" alt="Цветочки"></div>
@@ -102,6 +102,8 @@
               </div>
             </div>
           </div>
+          <button class="content__button">Показать ещё</button>
+
         </section>
       </article>
       <article class="about-author">

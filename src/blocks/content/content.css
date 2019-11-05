@@ -8,16 +8,19 @@
 @import url(./__item-title/content__item-title.css);
 @import url(./__item-wrap/content__item-wrap.css);
 @import url(./__text/content__text.css);
+@import url(./__button/content__button.css);
+@import url(./__link-wrap/content__link-wrap.css);
 
 .content {
   background-color:  #F5F6F7;
   padding: 80px 104px;
   display: grid;
-  grid-template-rows: 110px auto;
+  grid-template-rows: 110px auto auto;
   grid-template-columns: auto 223px;
   grid-template-areas:
     'title link'
-    'container container';
+    'container container'
+    'button button';
 
 }
 

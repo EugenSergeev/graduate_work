@@ -1,11 +1,14 @@
 .content__link {
-  grid-area: link;
-  margin-top: 22px;
-
+  display: flex;
+  flex-direction: row;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   color: #1A1B22;
+}
+
+.content__link:hover {
+  cursor: pointer;
 }

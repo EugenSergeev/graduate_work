@@ -11,6 +11,6 @@
 }
 
 .navigation__item:hover {
-
+  cursor: pointer;
   color: #ffffff;
 }

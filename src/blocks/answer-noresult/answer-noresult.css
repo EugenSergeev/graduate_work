@@ -3,7 +3,6 @@
 @import url(./__text/answer-noresult__text.css);
 
 .answer-noresult {
-  border: 1px black solid;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,2 +1,28 @@
 @import url(./__title/search__title.css);
 @import url(./__subtitle/search__subtitle.css);
+@import url(./__button/search__button.css);
+@import url(./__input/search__input.css);
+@import url(./__wrap/search__wrap.css);
+
+
+.search {
+  width: calc(100vw - 32px);
+  max-width: 448px;
+  padding: 0 16px;
+  margin: 30px auto 0;
+  color: white;
+
+}
+
+@media screen and (min-width: 768px) {
+  .search {
+    margin: 40px auto 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .search {
+    max-width: 608px;
+    margin: 40px auto 0;
+  }
+}

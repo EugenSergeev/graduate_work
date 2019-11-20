@@ -1,10 +1,17 @@
 .content__container {
-  grid-area: container;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 28px auto;
+  justify-content: space-evenly;
+}
 
-  display: grid;
-  grid-template-columns: repeat(3, 400px);
-  /*grid-template-rows: repeat(2, 576px);*/
-  grid-gap: 16px;
-
-  justify-content: center ;
+@media screen and (min-width: 768px){
+  .content__container {
+    grid-area: container;
+    margin: 0;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,33 +10,36 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Что в мире творится?</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
-
+  <link rel="icon" href="<%=require('./images/favicon.png')%>">
 </head>
+
 <body>
   <div class="root">
+    <div class="search-background"> </div>
     <header class="header">
-      <div class="header__bg"></div>
       <div class="header__logo">NewsAnalizer</div>
-      <nav class="navigation">
-        <a class="navigation__item navigation__item_activ">Главная</a>
-        <a class="navigation__item">О проекте</a>
+      <nav class="header__navigation">
+        <a href="./index.html" class="header__navigation-item header__navigation-item_active" ur>Главная</a>
+        <a href="./about.html" class="header__navigation-item">О проекте</a>
       </nav>
     </header>
     <main class="main">
-<!--SEARCH-->
-      <article class="search">
-        <h1 class="search__title">Что в мире творится?</h1>
-        <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной <br />она была в новостях за прошедшую неделю.</p>
-        <form class="search-string">
-          <input type="text" required class="search-string__field" placeholder="Введите тему">
-          <button class="search-string__button">Искать</button>
-        </form>
-<!--PRELOADER-->
+      <article>
+        <section class="search">
+          <h1 class="search__title">Что в мире <br> творится?</h1>
+          <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в
+            новостях за прошедшую неделю.</p>
+          <form class="search__wrap">
+            <input type="text" required class="search__input" placeholder="Введите тему">
+            <button class="search__button">Искать</button>
+          </form>
+        </section>
+
         <section class="preloader">
-          <i class ="preloader__circle"></i>
+          <i class="preloader__circle"></i>
           <p class="preloader__text">Идет поиск новостей...</p>
         </section>
-<!--NORESULT-->
+
         <section class="answer-noresult">
           <div class="answer-noresult__image"></div>
           <h3 class="answer-noresult__title">Ничего не найдено</h3>
@@ -44,60 +48,72 @@
 
         <section class="content">
           <h2 class="content__title">Результаты поиска</h2>
-          <div  class="content__link-wrap"><a href="./analitics.html" class="content__link">Посмотреть аналитику <img src="<%=require('./images/back.png')%>" alt="переход по ссылке"></a></div>
+          <div class="content__link-wrap">
+            <a href="./analitics.html" class="content__link">Посмотреть аналитику
+              <img src="<%=require('./images/back.png')%>" alt="переход по ссылке">
+            </a>
+          </div>
           <div class="content__container">
             <div class="content__item">
-              <div class="content__image"><img src="<%=require('./images/image.png')%>" alt="Цветочки"></div>
+              <img class="content__image" src="<%=require('./images/image.png')%>" alt="Цветочки">
               <div class="content__item-wrap">
                 <div class="content__date">2 августа, 2019</div>
                 <h4 class="content__item-title">Национальное достояние – парки</h4>
-                <p class="content__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                <p class="content__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                  складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
+                  приобщиться к природе.</p>
                 <a href="#" class="content__item-link">Лента.ру</a>
               </div>
             </div>
             <div class="content__item">
-              <div class="content__image"><img src="<%=require('./images/image.png')%>" alt="Цветочки"></div>
+              <img class="content__image" src="<%=require('./images/image.png')%>" alt="Цветочки">
               <div class="content__item-wrap">
                 <div class="content__date">2 августа, 2019</div>
                 <h4 class="content__item-title">Лесные огоньки: история одной фотографии</h4>
-                <p class="content__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                <p class="content__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы
+                  запечатлеть ускользающую красоту одного из местных чудес природы.</p>
                 <a href="#" class="content__item-link">Медуза</a>
               </div>
             </div>
             <div class="content__item">
-              <div class="content__image"><img src="<%=require('./images/image.png')%>" alt="Цветочки"></div>
+              <img class="content__image" src="<%=require('./images/image.png')%>" alt="Цветочки">
               <div class="content__item-wrap">
                 <div class="content__date">2 августа, 2019</div>
                 <h4 class="content__item-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
-                <p class="content__text">Знаменитый фотограф снимаетsssssssssss sssssssssssss ssssssssssssssss sssssssssssss ssssssssss sssssssssssss ssssssssssssss ssssssssssssss  первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                <p class="content__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
+                  необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
                 <a href="#" class="content__item-link">Риа</a>
               </div>
             </div>
             <div class="content__item">
-              <div class="content__image"><img src="<%=require('./images/image.png')%>" alt="Цветочки"></div>
+              <img class="content__image" src="<%=require('./images/image.png')%>" alt="Цветочки">
               <div class="content__item-wrap">
                 <div class="content__date">2 августа, 2019</div>
                 <h4 class="content__item-title">Национальное достояние – парки</h4>
-                <p class="content__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                <p class="content__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                  складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
+                  приобщиться к природе.</p>
                 <a href="#" class="content__item-link">Дзен</a>
               </div>
             </div>
             <div class="content__item">
-              <div class="content__image"><img src="<%=require('./images/image.png')%>" alt="Цветочки"></div>
+              <img class="content__image" src="<%=require('./images/image.png')%>" alt="Цветочки">
               <div class="content__item-wrap">
                 <div class="content__date">2 августа, 2019</div>
                 <h4 class="content__item-title">Лесные огоньки: история одной фотографии</h4>
-                <p class="content__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-                    из местных чудес природы.</p>
+                <p class="content__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы
+                  запечатлеть ускользающую красоту одного
+                  из местных чудес природы.</p>
                 <a href="#" class="content__item-link">Афиша</a>
               </div>
             </div>
             <div class="content__item">
-              <div class="content__image"><img src="<%=require('./images/image.png')%>" alt="Цветочки"></div>
+              <img class="content__image" src="<%=require('./images/image.png')%>" alt="Цветочки">
               <div class="content__item-wrap">
                 <div class="content__date">2 августа, 2019</div>
                 <h4 class="content__item-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
-                <p class="content__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                <p class="content__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
+                  необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
                 <a href="#" class="content__item-link">Медиазона</a>
               </div>
             </div>
@@ -106,26 +122,29 @@
 
         </section>
       </article>
-      <article class="about-author">
-        <div class="about-author__image">
-          <img src="https://sun9-40.userapi.com/c840125/v840125598/5c88b/V6GqWiqJaWE.jpg?ava=1" alt="летящий на закате орёл">
-          <h3 class="about-author__title">Об авторе</h3>
-          <div class="about-author__text-container">
-            <p class="about-author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
-            <p class="about-author__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
-          </div>
+      <article class="about">
+        <div class="about__image"></div>
+        <div class="about__container">
+          <h3 class="about__title">Об авторе</h3>
+          <p class="about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы
+            занимаетесь, какими технологиями разработки владеете.</p>
+          <p class="about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем
+            можете помочь потенциальным заказчикам.</p>
+          <p class="about__text">Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами
+            связаться</p>
         </div>
       </article>
     </main>
     <footer class="footer">
-      <div class="footer__copyright">© 2019  Supersite</div>
-      <div class="footer_links">
+      <div class="footer__copyright">© 2019 Supersite</div>
+      <div class="footer__links-container">
         <a href="./index.html" class="footer__link">Главная</a>
         <a href="./about.html" class="footer__link">О проекте</a>
         <a href="https://praktikum.yandex.ru" class="footer__link">Яндекс.Практикум</a>
       </div>
-      <div class="footer__social">
-        <a href="https://github.com/EugenSergeev" class="footer__social-link"><img src="<%=require('./images/github.png')%>" alt="github link"></a>
+      <div class="footer__social-container">
+        <a href="https://github.com/EugenSergeev" class="footer__social-link"><img
+            src="<%=require('./images/github.png')%>" alt="github link"></a>
         <a href="#" class="footer__social-link"><img src="<%=require('./images/fb.png')%>" alt="facebook link">
         </a>
       </div>
@@ -133,4 +152,5 @@
   </div>
   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
+
 </html>

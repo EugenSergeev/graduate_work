@@ -1,7 +1,14 @@
 .content__item-wrap {
-  height: 230px;
-  padding: 20px 24px 54px;
+  height: calc(100%/2.3);
+  padding: 12px 24px 45px;
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+@media screen and (min-width: 768px){
+  .content__item-wrap {
+    max-height: 218px;
+    padding: 16px 16px 36px;
+  }
 }

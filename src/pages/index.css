@@ -2,12 +2,13 @@
 @import url(../vendor/fonts.css);
 @import url(../blocks/preloader/preloader.css);
 @import url(../blocks/header/header.css);
-@import url(../blocks/navigation/navigation.css);
 @import url(../blocks/search/search.css);
-@import url(../blocks/search-string/search-string.css);
 @import url(../blocks/answer-noresult/answer-noresult.css);
 @import url(../blocks/content/content.css);
 @import url(../blocks/content/content.css);
+@import url(../blocks/about/about.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/search-background/search-background.css);
 
 .root {
   position: relative;
@@ -15,11 +16,12 @@
   margin: 0 auto;
   width: 100%;
   max-width: 1440px;
+  min-width: 320px;
   cursor: default;
+  overflow: hidden;
 }
-
-@media screen and (max-width: 980px) {
-  .root {
-    width: 100%;
-  }
+/*
+html {
+  background-color: black;
 }
+ */

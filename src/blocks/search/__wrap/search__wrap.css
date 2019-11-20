@@ -1,0 +1,32 @@
+.search__wrap {
+  width: calc(100vw-32px);
+  height: 128px;
+  margin: 24px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .search__wrap {
+    position: relative;
+    margin: 24px auto 48px;
+    width: 448px;
+    height: 56px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .search__wrap {
+    margin: 64px auto 60px;
+    width: 608px;
+    height: 64px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+  }
+}

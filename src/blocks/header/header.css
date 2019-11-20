@@ -1,14 +1,30 @@
 @import url(./__logo/header__logo.css);
-@import url(./__bg/header__bg.css);
+@import url(./__navigation/header__navigation.css);
+@import url(./__navigation-item/header__navigation-item.css);
+
 .header {
   width: 100%;
-  height: 80px;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  color: #fff;
   border-bottom: 1px solid grey;
+  height: 56px;
 
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 625px) {
+  .header {
+    font-size: 20px;
+    height: 64px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+  }
 }

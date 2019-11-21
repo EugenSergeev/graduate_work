@@ -1,0 +1,9 @@
+.technology__item {
+  margin: 15px auto 0;
+}
+
+@media screen and (min-width: 1024px){
+  .technology__item {
+    margin-right: 40px;
+  }
+}

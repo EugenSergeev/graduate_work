@@ -11,7 +11,7 @@
   color: #1A1B22;
 }
 
-@media screen and (min-width: 625px) {
+@media screen and (min-width: 636px) {
   .footer__links-container {
     flex-direction: row;
   }

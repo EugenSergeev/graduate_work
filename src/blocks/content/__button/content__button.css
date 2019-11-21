@@ -3,8 +3,8 @@
 .content__button {
   grid-area: button;
   width: 288px;
-  height: 64px;
-  margin: 80px auto 0;
+  height: 56px;
+  margin: 13px auto ;
   background: #FFFFFF;
   border-radius: 80px;
   border: none;
@@ -14,6 +14,7 @@
   line-height: 24px;
   color: #1A1B22;
   text-align: center;
+  align-self: center;
 }
 
 .content__button:focus {
@@ -22,4 +23,16 @@
 
 .content__button:hover {
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px){
+  .content__button {
+    margin-top: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .content__button {
+    margin-top: 64px;
+  }
 }

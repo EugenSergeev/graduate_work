@@ -1,0 +1,27 @@
+@import url(./__wrap/technology__wrap.css);
+@import url(./__title/technology__title.css);
+@import url(./__item/technology__item.css);
+@import url(./__item-name/technology__item-name.css);
+@import url(./__item-logo/technology__item-logo.css);
+
+.technology {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 40px;
+  background-color: #F5F6F7;
+}
+
+@media screen and (min-width: 768px) {
+  .technology {
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .technology {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px 104px 88px;
+  }
+}

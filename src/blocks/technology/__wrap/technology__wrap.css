@@ -1,0 +1,14 @@
+.technology__wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 720px;
+  padding-top: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .technology__wrap {
+    padding: 0 72px 0 0;
+  }
+}

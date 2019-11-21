@@ -8,6 +8,7 @@
   color: #1A1B22;
   overflow: hidden;
   column-width: 100%;
+  max-width: 336px;
 }
 
 @media screen and (min-width: 1024px){

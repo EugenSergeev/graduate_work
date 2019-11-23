@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Roboto-med';
-  src: url("./fonts/roboto-medium-webfont.woff") format("woff2");
+  src: url("../vendor/fonts/roboto-medium-webfont.woff") format("woff2");
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("./fonts/roboto-regular-webfont.woff") format("woff2");
+  src: url("../vendor/fonts/roboto-regular-webfont.woff") format("woff2");
 }
 @font-face {
   font-family: 'Roboto Slab';
-  src: url("./fonts/robotoslab-regular-webfont.woff") format("woff2");
+  src: url("fonts/robotoslab-regular-webfont.woff") format("woff2");
 }

@@ -1,3 +1,5 @@
+@import url(./_small-screen-hide/content__link-wrap_small-screen-hide.css);
+
 .content__link-wrap {
   margin-top: 16px;
 }

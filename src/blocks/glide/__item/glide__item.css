@@ -1,0 +1,16 @@
+.glide__item {
+  width: 256px ;
+  height: 232px ;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 16px;
+
+  display: grid;
+  grid-template-columns: 48px 196px;
+  grid-template-rows: auto 24px 24px 134px;
+  grid-template-areas:
+  'date date'
+  'img name'
+  'img email'
+  'text text';
+}

@@ -1,0 +1,18 @@
+.content__button.content__button_only-small-screen-visible {
+  border: 1px solid #1A1B22;
+  box-sizing: border-box;
+  border-radius: 80px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 52px;
+  color: #1A1B22;
+}
+
+
+@media screen and (min-width: 768px){
+  .content__button_only-small-screen-visible {
+    display: none;
+  }
+}

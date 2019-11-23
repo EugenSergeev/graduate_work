@@ -6,3 +6,15 @@
 @import url(../blocks/about-author/about-author.css);
 @import url(../blocks/technology/technology.css);
 @import url(../blocks/content/content.css);
+@import url(../blocks/glide/glide.css);
+
+.root {
+  position: relative;
+  font-family: 'Roboto';
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  min-width: 320px;
+  cursor: default;
+  overflow: hidden;
+}

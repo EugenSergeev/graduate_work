@@ -1,0 +1,21 @@
+@import url(../blocks/header/header.css);
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/analitics-root/analitics-root.css);
+@import url(../blocks/analitics-header/analitics-header.css);
+@import url(../blocks/analitic-table/analitic-table.css);
+
+.root {
+  position: relative;
+  font-family: 'Roboto';
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  min-width: 320px;
+  cursor: default;
+  overflow: hidden;
+
+
+  color: #1A1B22;
+}

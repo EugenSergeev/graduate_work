@@ -1,0 +1,8 @@
+.glide__item-img {
+  grid-area: img;
+  width: 48px;
+  height: 48px;
+  background-image: url(https://sun9-40.userapi.com/c840125/v840125598/5c88b/V6GqWiqJaWE.jpg?ava=1);
+  background-size: cover;
+  border-radius: 50%;
+}

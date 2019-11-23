@@ -1,0 +1,11 @@
+.analitic-table__date-wrap {
+  grid-area: date;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #1A1B22;
+}

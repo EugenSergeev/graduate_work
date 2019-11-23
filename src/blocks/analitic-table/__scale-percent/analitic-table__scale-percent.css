@@ -1,0 +1,9 @@
+.analitic-table__scale-percent {
+  margin: 0;
+}
+
+@media screen and (max-width: 628px) {
+  .analitic-table__scale-percent{
+    display: none;
+  }
+}

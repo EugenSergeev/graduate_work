@@ -1,0 +1,5 @@
+@media screen and (max-width: 767px) {
+  .content__link-wrap_small-screen-hide {
+    display: none;
+  }
+}

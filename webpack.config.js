@@ -60,14 +60,14 @@ module.exports = {
         exclude: /node_modules/
       }, {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=./vendor/fonts/[name].[ext]'
+        loader: 'file-loader?name=styles/fonts/[name].[ext]'
       }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin(
       {
-        filename: 'styles/style.[contenthash].css'
+        filename: 'style.[contenthash].css'
       }
     ),
     new OptimizeCssAssetsPlugin(

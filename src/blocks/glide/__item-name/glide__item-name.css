@@ -7,3 +7,9 @@
   font-size: 20px;
   color: #1A1B22;
 }
+
+@media screen and (min-width: 1024px){
+  .glide__item-name {
+    font-size: 26px;
+  }
+}

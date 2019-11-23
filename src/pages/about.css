@@ -40,3 +40,11 @@
   -webkit-align-items: center;
   align-items: center;
 }
+
+.root {
+  background-color: white;
+}
+
+html {
+  background: #E5E5E5;
+}

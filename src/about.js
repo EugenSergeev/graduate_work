@@ -7,5 +7,6 @@ var mySwiper = new Swiper('.swiper-container', {
   effect: "slide",
   spaceBetween: 16,
   //slidesPerView: auto,
-  centeredSlides: true
+  centeredSlides: true,
+  grabCursor: true
 });

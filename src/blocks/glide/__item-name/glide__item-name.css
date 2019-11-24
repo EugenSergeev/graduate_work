@@ -1,7 +1,7 @@
 .glide__item-name {
   grid-area: name;
   margin: 0 0 0 12px;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;

@@ -1,23 +1,7 @@
 import "./pages/about.css"
 import "./blocks/swiper/swiper.css"
 import "./vendor/swiper.js"
-/*
-var mySwiper = new Swiper('.swiper-container', {
-  speed: 100,
-  effect: "slide",
-  spaceBetween: 16,
-  //slidesPerView: auto,
-  centeredSlides: true,
-  grabCursor: true,
-  resistance: false,
-  watchSlidesVisibility: true,
-  loop: true,
-  avigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-*/
+
 var swiper = new Swiper('.swiper-container', {
   effect: 'coverflow',
   grabCursor: true,

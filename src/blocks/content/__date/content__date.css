@@ -1,0 +1,21 @@
+.content__date {
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+  margin: 10px 0 0 16px;
+}
+
+@media screen and (min-width: 768px){
+  .content__date {
+    margin: 16px 0 0 16px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .content__date {
+    margin: 24px 0 0 20px;
+  }
+}

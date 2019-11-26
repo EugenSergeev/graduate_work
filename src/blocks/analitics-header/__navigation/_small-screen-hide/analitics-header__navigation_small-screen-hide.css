@@ -1,0 +1,5 @@
+@media screen and (max-width: 628px) {
+  .analitics-header__navigation.analitics-header__navigation_small-screen-hide{
+    display: none;
+  }
+}

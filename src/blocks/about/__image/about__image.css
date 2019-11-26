@@ -1,0 +1,23 @@
+.about__image {
+  min-width: 272px;
+  min-height: 272px;
+  background-image: url(https://sun9-40.userapi.com/c840125/v840125598/5c88b/V6GqWiqJaWE.jpg?ava=1);
+  background-size: cover;
+  margin: 32px auto 0;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .about__image {
+    min-width: 232px;
+    min-height: 232px;
+    margin:0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about__image {
+    min-width: 464px;
+    min-height: 464px;
+  }
+}

@@ -1,0 +1,28 @@
+.header__navigation {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin: 16px;
+  margin-left: 0;
+
+  font-family: 'Roboto-med';
+  font-style: normal;
+  font-weight: 500;
+
+}
+
+@media screen and (min-width: 625px) {
+  .header__navigation {
+    margin: 22px 42px 18px;
+
+    font-size: 18px;
+
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__navigation {
+    margin: 30px 101px 26px;
+  }
+}

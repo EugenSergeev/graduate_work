@@ -1,0 +1,39 @@
+@import url(./__title/analitic-table__title.css);
+@import url(./__text/analitic-table__text.css);
+@import url(./__scale-percent/analitic-table__scale-percent.css);
+@import url(./__scale-percent-wrap/analitic-table__scale-percent-wrap.css);
+@import url(./__scale-line/analitic-table__scale-line.css);
+@import url(./__diagrams-wrap/analitic-table__diagrams-wrap.css);
+@import url(./__diagram-value/analitic-table__diagram-value.css);
+@import url(./__date/analitic-table__date.css);
+@import url(./__date-wrap/analitic-table__date-wrap.css);
+
+.analitic-table {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: auto auto 1px 18px 336px 18px;
+  grid-template-areas:
+  'title title'
+  'column1 column2'
+  'line line'
+  'none percents'
+  'date diagrams'
+  'none1 percents2';
+  background-color: #F5F6F7;
+
+  padding: 16px 16px;
+}
+
+
+@media screen and (min-width: 628px) {
+  .analitic-table {
+    padding: 40px 40px;
+    grid-template-rows: auto auto 16px 26px 336px 26px ;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .analitic-table {
+    padding: 40px 104px;
+  }
+}

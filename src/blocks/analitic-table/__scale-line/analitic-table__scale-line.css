@@ -1,0 +1,6 @@
+.analitic-table__scale-line {
+  grid-area: line;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 16px;
+}

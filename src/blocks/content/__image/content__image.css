@@ -1,0 +1,13 @@
+.content__image {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px){
+  .content__image {
+    object-fit: cover;
+    display: block;
+    height: 100%;
+  }
+}

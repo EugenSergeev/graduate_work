@@ -1,0 +1,16 @@
+@import url(./_bottom/analitic-table__scale-percent-wrap_bottom.css);
+
+.analitic-table__scale-percent-wrap {
+  grid-area: percents;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+}

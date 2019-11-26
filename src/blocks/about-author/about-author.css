@@ -1,0 +1,23 @@
+@import url(./__text/about-author__text.css);
+@import url(./__title/about-author__title.css);
+
+.about-author {
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+
+  color: #1A1B22;;
+}
+
+@media screen and (min-width: 625px) {
+  .about-author{
+    padding: 30px 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about-author{
+    padding: 94px 104px;
+  }
+}

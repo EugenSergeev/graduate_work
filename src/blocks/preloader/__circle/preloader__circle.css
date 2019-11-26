@@ -1,0 +1,20 @@
+.preloader__circle {
+	display: block;
+	width: 75px;
+  height: 75px;
+  border: none;
+	border-radius: 50%;
+  background-image: url(../../../images/Ellipse.png);
+  background-repeat: no-repeat;
+  background-position: center;
+
+	margin: auto;
+
+	animation: spin 1.75s infinite linear;
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(-360deg);
+	}
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Поиск и анализ новостных лент">
+  <meta name="keywords" content="news, analize">
+  <meta name="author" content="Сергеев Евгений">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Что в мире творится?</title>
+  <link rel="icon" href="<%=require('./images/favicon.png')%>">
+</head>
+
+<body>
+  <div class="root">
+    <header class="header">
+      <div class="header__logo header__logo_black">NewsAnalizer</div>
+      <nav class="header__navigation">
+        <a href="./index.html" class="header__navigation-item header__navigation-item_hover-black">Главная</a>
+        <a href="./about.html"
+          class="header__navigation-item header__navigation-item_active header__navigation-item_black header__navigation-item_hover-black">О
+          проекте</a>
+      </nav>
+    </header>
+    <article class="about-author">
+      <h1 class="about-author__title">Клиентам</h1>
+      <p class="about-author__text">Этот сайт — дипломный проект студента
+        Яндкс.Практикума. Его цель — показать, чему научился студент, и какими
+        технологиями владеет.<br><br> Вёртска сайта выполнена по методологии БЭМ. Это делает сайт гибким и
+        масштабируемым. Кроме того, добавлять новые страницы и
+        функциальность проще и быстрее, чем в проектах, выполненных по другим
+        методологиям. Также сайт проще и дешевле поддерживать. <br><br> Карточки с
+        новостям приходят с сервера и обрабатываются асихронно. То есть сайт продолжает
+        работать, пока от сервера приходит ответ. Это повышает удобство использования
+        сервиса.<br><br> При создании проекта была использона сборка технологией
+        Webpack. Это современных подход к разработке сайтов. Код оптимизируется, а
+        значит, сайт работает быстрее. Также настроена сайт работает в старых
+        браузерах. Даже если посетители — пользователи старых операционных систем у них
+        не будет проблем с отображением. А значит потенциальная аудитория
+        возрастает.<br><br>Проект был проверен экспертами Яндекс.Практикума. И если
+        вашему бизесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
+    </article>
+
+    <article class="technology">
+      <h2 class="technology__title">Используемые <br> технологии</h2>
+      <div class="technology__wrap">
+        <div class="technology__item">
+          <h4 class="technology__item-name">HTML</h4>
+          <img src="<%=require('./images/html-logo.png')%>" alt="html logo" class="technology__item-logo">
+        </div>
+        <div class="technology__item">
+          <h4 class="technology__item-name">CSS</h4>
+          <img src="<%=require('./images/css-logo.png')%>" alt="css logo" class="technology__item-logo">
+        </div>
+        <div class="technology__item">
+          <h4 class="technology__item-name">Java Script</h4>
+          <img src="<%=require('./images/js-logo.png')%>" alt="js logo" class="technology__item-logo">
+        </div>
+        <div class="technology__item">
+          <h4 class="technology__item-name">Webpack</h4>
+          <img src="<%=require('./images/webpack-logo.png')%>" alt="webpack logo" class="technology__item-logo">
+        </div>
+      </div>
+    </article>
+
+    <article class="about">
+      <div class="about__image"></div>
+      <div class="about__container">
+        <h3 class="about__title">Об авторе</h3>
+        <p class="about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы
+          занимаетесь, какими технологиями разработки владеете.</p>
+        <p class="about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем
+          можете помочь потенциальным заказчикам.</p>
+        <p class="about__text">Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами
+          связаться</p>
+      </div>
+    </article>
+    <article class="content">
+      <h2 class="content__title">История коммитов из GitHub</h2>
+      <div class="content__link-wrap content__link-wrap_small-screen-hide">
+        <a href="https://github.com/EugenSergeev/graduate_work/commits/htmlCode" class="content__link">Открыть в Github
+          <img src="<%=require('./images/back.png')%>" alt="go to github commits history">
+        </a>
+      </div>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="glide__item">
+              <p class="glide__item-date">14 августа, 2019</p>
+              <img src="https://sun9-40.userapi.com/c840125/v840125598/5c88b/V6GqWiqJaWE.jpg?ava=1" alt="аватар"
+                class="glide__item-img">
+              <h4 class="glide__item-name">Антон Дмитриев</h4>
+              <p class="glide__item-email">anton@yandex.ru</p>
+              <p class="glide__item-text">You can install this plugin directly from NetBeans Plugin Portal: in
+                NetBeans, open
+                Tools > Plugins > Available
+                plugins and find and install Emmet.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="glide__item">
+              <p class="glide__item-date">14 августа, 2019</p>
+              <img src="https://sun9-40.userapi.com/c840125/v840125598/5c88b/V6GqWiqJaWE.jpg?ava=1" alt="аватар"
+                class="glide__item-img">
+              <h4 class="glide__item-name">Антон Дмитриев</h4>
+              <p class="glide__item-email">anton@yandex.ru</p>
+              <p class="glide__item-text">You can install this plugin directly from NetBeans Plugin Portal: in
+                NetBeans, open
+                Tools > Plugins > Available
+                plugins and find and install Emmet.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="glide__item">
+              <p class="glide__item-date">14 августа, 2019</p>
+              <img src="https://sun9-40.userapi.com/c840125/v840125598/5c88b/V6GqWiqJaWE.jpg?ava=1" alt="аватар"
+                class="glide__item-img">
+              <h4 class="glide__item-name">Антон Дмитриев</h4>
+              <p class="glide__item-email">anton@yandex.ru</p>
+              <p class="glide__item-text">You can install this plugin directly from NetBeans Plugin Portal: in
+                NetBeans, open
+                Tools > Plugins > Available
+                plugins and find and install Emmet.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="glide__item">
+              <p class="glide__item-date">14 августа, 2019</p>
+              <img src="https://sun9-40.userapi.com/c840125/v840125598/5c88b/V6GqWiqJaWE.jpg?ava=1" alt="аватар"
+                class="glide__item-img">
+              <h4 class="glide__item-name">Антон Дмитриев</h4>
+              <p class="glide__item-email">anton@yandex.ru</p>
+              <p class="glide__item-text">You can install this plugin directly from NetBeans Plugin Portal: in
+                NetBeans, open
+                Tools > Plugins > Available
+                plugins and find and install Emmet.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+          <div class="swiper-slide">Slide 10</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <!-- <div class="glide__item">
+        <p class="glide__item-date">14 августа, 2019</p>
+        <img src="https://sun9-40.userapi.com/c840125/v840125598/5c88b/V6GqWiqJaWE.jpg?ava=1" alt="аватар"
+          class="glide__item-img">
+        <h4 class="glide__item-name">Антон Дмитриев</h4>
+        <p class="glide__item-email">anton@yandex.ru</p>
+        <p class="glide__item-text">You can install this plugin directly from NetBeans Plugin Portal: in
+          NetBeans, open
+          Tools > Plugins > Available
+          plugins and find and install Emmet.</p>
+      </div> -->
+
+
+      <a href="https://github.com/EugenSergeev/graduate_work/commits/htmlCode"
+        class="content__button content__button_only-small-screen-visible">Открыть в Github </a>
+    </article>
+
+    <footer class="footer">
+      <div class="footer__copyright">© 2019 Supersite</div>
+      <div class="footer__links-container">
+        <a href="./index.html" class="footer__link">Главная</a>
+        <a href="./about.html" class="footer__link">О проекте</a>
+        <a target="_blank" href="https://praktikum.yandex.ru" class="footer__link">Яндекс.Практикум</a>
+      </div>
+      <div class="footer__social-container">
+        <a target="_blank" href="https://github.com/EugenSergeev" class="footer__social-link"><img
+            src="<%=require('./images/github.png')%>" alt="github link"></a>
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=1530421007" class="footer__social-link"><img
+            src="<%=require('./images/fb.png')%>" alt="facebook link">
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

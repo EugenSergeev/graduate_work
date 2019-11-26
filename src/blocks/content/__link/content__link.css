@@ -1,0 +1,15 @@
+.content__link {
+  display: flex;
+  flex-direction: row;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  text-decoration: none;
+}
+
+.content__link:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,17 @@
+@import url(./_small-screen-hide/analitics-header__navigation_small-screen-hide.css);
+
+.analitics-header__navigation {
+  color:#B6BCBF;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 64px;
+}
+
+@media screen and (min-width: 1024px) {
+  .analitics-header__navigation {
+    margin-bottom: 80px;
+  }
+}

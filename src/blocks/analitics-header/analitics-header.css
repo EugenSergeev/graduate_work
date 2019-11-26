@@ -1,0 +1,23 @@
+@import url(./__title/analitics-header__title.css);
+@import url(./__subtitle/analitics-header__subtitle.css);
+@import url(./__sum/analitics-header__sum.css);
+@import url(./__link-main/analitics-header__link-main.css);
+@import url(./__navigation/analitics-header__navigation.css);
+
+.analitics-header {
+  background-color: white;
+
+  padding: 16px 16px;
+}
+
+@media screen and (min-width: 628px) {
+  .analitics-header {
+    padding: 32px 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .analitics-header {
+    padding: 40px 104px;
+  }
+}

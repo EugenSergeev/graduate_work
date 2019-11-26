@@ -1,0 +1,12 @@
+@import url(./_small-screen-hide/content__link-wrap_small-screen-hide.css);
+
+.content__link-wrap {
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .content__link-wrap {
+    grid-area: link;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,7 @@
+.analitic-table__diagrams-wrap {
+  grid-area: diagrams;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}

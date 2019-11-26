@@ -1,0 +1,17 @@
+.content__text {
+  margin: 8px 16px 0;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1A1B22;
+  overflow: hidden;
+  column-width: 100%;
+}
+
+@media screen and (min-width: 1024px){
+  .content__text {
+    margin: 16px 24px 0;
+  }
+}

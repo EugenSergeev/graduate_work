@@ -1,0 +1,24 @@
+@import url(./_active/header__navigation-item_active.css);
+@import url(./_black/header__navigation-item_black.css);
+@import url(./_hover-black/header__navigation-item_hover-black.css);
+
+.header__navigation-item {
+  height: 1em;
+  text-decoration: none;
+  color: #B6BCBF;
+}
+
+
+.header__navigation-item:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+.header__navigation-item:last-of-type {
+  margin-left: 12px;
+}
+@media screen and (min-width: 625px) {
+  .header__navigation-item:last-of-type {
+    margin-left: 34px;
+  }
+}

@@ -1,45 +1,41 @@
-import { l } from './script';
+
+const l = (text) => console.log(text);
+
+import {dates} from './dates';
 
 export class Api {
   constructor() {
     this.apiKey = 'e5eaab959f5c432780b91b754fa7cab6';
-    this.url = 'https://newsapi.org/v2/everything?q=';
-
+    this.url = 'https://newsapi.org/v2/';
   }
 
-  newsApiRequest = (request, dateFrom, dateTo) => {
-    const tempString = `${this.url}${request}&excludeDomains=lifehacker.ru&apiKey=${this.apiKey}&from=${dateFrom}&to=${dateTo}&pageSize=100`;
-
+  newsApiRequest = (request, dateFrom, dateTo, endPoints = 'everything') => {
+    let tempString;
+    if (endPoints=='everything') {
+      tempString = `${this.url}${endPoints}?q=${request}&excludeDomains=lifehacker.ru&apiKey=${this.apiKey}&from=${dates.newsApiFormat(dateFrom)}&to=${dates.newsApiFormat(dateTo)}&pageSize=100`;
+    } else {
+      tempString = `${this.url}${endPoints}?q=${request}&apiKey=${this.apiKey}&pageSize=100`;
+    }
+    //l(tempString);
     return fetch(tempString)
       .then(res => this.checkRes(res))
       .catch(err => this.alertError(err))
   }
 
   alertError(err) {
-    alert(`Ошибка: ${err.status} - ${err.statusText}.\n
-          Возможно есть проблемы с соединением`);
-
+    alert(`Ошибка: ${err.status} - ${err.statusText}.\nВозможно есть проблемы с соединением`);
   }
 
   checkRes(res) {
     if (res.ok) return res.json();
     return Promise.reject(res);
   }
-  /*
-      formatDate = (date) => {
-
-          var dd = date.getDate();
-          if (dd < 10) dd = '0' + dd;
-
-          var mm = date.getMonth() + 1;
-          if (mm < 10) mm = '0' + mm;
-
-          var yyyy = date.getFullYear();
-          if (yy < 10) yy = '0' + yy;
-
-          return dd + '.' + mm + '.' + yy;
-      }
-  */
 }
+/*
+https://newsapi.org/v2/everything?q=bitcoin&apiKey=e5eaab959f5c432780b91b754fa7cab6
+https://newsapi.org/v2/top-headlines?country=us&apiKey=e5eaab959f5c432780b91b754fa7cab6
 
-//https://newsapi.org/v2/everything?q=Ира&excludeDomains=lifehacker.ru&apiKey=e5eaab959f5c432780b91b754fa7cab6&pageSize=100
+https://newsapi.org/v2/top-headlines?q=trump&apiKey=e5eaab959f5c432780b91b754fa7cab6
+https://newsapi.org/v2/top-headlines?q=Свадьба&apiKey=e5eaab959f5c432780b91b754fa7cab6&pageSize=100
+https://newsapi.org/v2/top-headlines?q=Свадьба&excludeDomains=lifehacker.ru&apiKey=e5eaab959f5c432780b91b754fa7cab6&from=2019-11-24&to=2019-12-01&pageSize=100
+*/

@@ -1,10 +1,11 @@
 import {l} from './script'
+import {dates} from './dates';
 
 export class Card {
   constructor(cardObject, container) {
     this.container = container;
     this.title = cardObject.title;
-    this.date = cardObject.publishedAt;
+    this.date = dates.cardsFormat(Date.parse(cardObject.publishedAt));
     this.text = cardObject.description;
     this.source = cardObject.source.name;
     this.link = cardObject.url;
@@ -15,8 +16,8 @@ export class Card {
   render = () => {
     this.element = this.createCard();
     this.container.appendChild(this.element);
-    //this.addListeners();
   }
+
   createCard() {
     const templateCard = `<div class="content__item">
                             <img class="content__image" src="${this.image}" alt="${this.title}">

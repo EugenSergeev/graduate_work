@@ -1,8 +1,9 @@
 export const l = (text) => console.log(text);
 import { Api } from './api';
 import { CardList } from './cardlist';
+import { dates } from './dates';
 
-export class Search {
+class Search {
   constructor() {
     this.string = document.querySelector('.search__input');
     this.button = document.querySelector('.search__button');
@@ -33,7 +34,7 @@ export class Search {
 
   returnLastRequest() {                                     //Возвращает в поисковую строку последний запрос
     if (sessionStorage.getItem('request') == null) {        //
-      if(sessionStorage.getItem('request')!=null) {
+      if (sessionStorage.getItem('request') != null) {
         this.string.placeholder = localStorage.getItem('request');
       }
     } else {
@@ -41,7 +42,6 @@ export class Search {
       this.sendRequest();
     }
   }
-
 
   validateInput = (event) => {
     const string = event.target;
@@ -57,43 +57,30 @@ export class Search {
     }
   }
 
-  saveStorage = () => {
-    localStorage.setItem('request', this.string.value);
-    sessionStorage.setItem('request', this.string.value);
-  }
-
-  submitForm =(event) => {
+  submitForm = (event) => {
     event.preventDefault();
-    this.moreCardButton.removeEventListener('click',this.cardList.showThreeCards);
-    delete this.cardList;
+    if (this.cardList != null) {
+      this.moreCardButton.removeEventListener('click', this.cardList.showThreeCards);
+      delete this.cardList;
+    };
     this.sendRequest();
   }
 
   sendRequest = () => {
     this.hideBlock(this.noresult);
-    l(`hide noresult`);
     this.hideBlock(this.content);
-    l(`hide content`);
     this.showBlock(this.preloader);
-    l(`show preloader`);
-    this.saveStorage();
-
-    const dateNow = new Date();
-    const dateTo = dateNow;
-    const dateFrom = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate() - 7);
-
-    this.newsApi.newsApiRequest(this.string.value, dateFrom.toUTCString(), dateTo.toUTCString()).then(resJson => {
+    this.saveStorage(this.string.value, dates.now(), dates.daysAgo(dates.now(),7));
+    this.newsApi.newsApiRequest(this.string.value, dates.now(), dates.daysAgo(dates.now(),7)).then(resJson => {
       this.hideBlock(this.preloader);
-      l(`hide preloader`);
       if (resJson.articles.length) {
-        this.cardList = new CardList(document.querySelector('.content__container'),resJson);
+        this.cardList = new CardList(document.querySelector('.content__container'), resJson);
         this.cardList.showThreeCards();
         this.showBlock(this.content);
-        this.moreCardButton.addEventListener('click',this.cardList.showThreeCards);
-        l(`show content`);
+        this.moreCardButton.addEventListener('click', this.cardList.showThreeCards);
       } else {
         this.showBlock(this.noresult);
-        l(`show noresult`);
+
       }
     });
 
@@ -101,14 +88,18 @@ export class Search {
 
   showMoreButton = () => {
     this.showBlock(this.moreCardButton);
-    l(`show morebutton`);
   }
 
   hideMoreButton = () => {
     this.hideBlock(this.moreCardButton);
-    l(`hide morebutton`);
   }
 
+  saveStorage = (request, dateFrom, dateTo) => {
+    localStorage.setItem('request', request);
+    sessionStorage.setItem('request', request);
+    sessionStorage.setItem('dateFrom', dates.newsApiFormat(dateFrom));
+    sessionStorage.setItem('dateTo', dates.newsApiFormat(dateTo));
+  }
 };
 
-export const s = new Search();
+export const search = new Search();

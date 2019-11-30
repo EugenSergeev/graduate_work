@@ -1,5 +1,5 @@
 import {Card} from './card';
-import { l,s } from './script';
+import { l,search } from './script';
 
 export class CardList {
   constructor(container, resJson) {
@@ -27,12 +27,10 @@ export class CardList {
   }
 
   areOtherCards() {
-    l(this.totalCards);
-    l(this.enableCards);
     if ((this.totalCards-this.enableCards)>0) {
-      s.showMoreButton();
+      search.showMoreButton();
     } else {
-      s.hideMoreButton();
+      search.hideMoreButton();
     }
   }
 }

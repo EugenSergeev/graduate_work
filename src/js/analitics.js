@@ -1,44 +1,61 @@
-import { Api } from "./api";
-import { dates } from './dates';
 const l = (text) => console.log(text);
+
+import { dates } from './dates';
 
 class Analitics {
   constructor() {
-    this.request = sessionStorage.getItem('request');
-    this.dateTo = new Date(Date.parse(sessionStorage.getItem('dateTo')));
-    this.dateFrom = new Date(Date.parse(sessionStorage.getItem('dateFrom')));
+    this.request = sessionStorage.request;
+    this.answer = JSON.parse(sessionStorage.answer);
     this.title = document.querySelector('.analitics-header__request');
-    this.newsApi = new Api();
-    this.addTextTitle(this.request);
+    this.totalNews = document.querySelector('.analitics-header__totalNews');
+    this.topHeadlines = document.querySelector('.analitics-header__topHeadlines');
+    this.datesOfSheets = document.querySelectorAll('.analitic-table__date');
+    this.counts = document.querySelectorAll('.analitic-table__diagram-value');
+    this.datesAndCounts = this.countOfDays();
+    this.addText(this.title,this.request);
+    this.showAnalitics()
   }
 
-  newsTotal = (dateTo, dateFrom) => {
-    let totalNews, topHeadlines;
-    this.newsApi.newsApiRequest(this.request, dateTo, dateFrom).then(resJson => {
-      totalNews = resJson.totalResults;
-      this.newsApi.newsApiRequest(this.request, dateTo, dateFrom, 'top-headlines').then(resJson => {
-        topHeadlines = resJson.totalResults;
-          return [totalNews, topHeadlines];
-      });
-    });
+  showAnalitics = () => {
+    this.addText(this.totalNews,this.answer.articles.length);
+    this.addText(this.topHeadlines,this.countHeadlines());
+    l(this.datesAndCounts);
+    this.countsOfSheets();
   }
 
-  newWeek = () => {
-
+  countsOfSheets = () => {
+    for (let i = 0; i<7 ; i++) {
+      this.addText(this.datesOfSheets[i],dates.analiticsFormat(this.datesAndCounts[i][0]));
+    }
   }
-  newsDay = () => {
 
+  datesOfAnswer = () => new Set(this.answer.articles.map((current) => current.publishedAt.substr(0,10)));
+
+  countOfDays = () => {
+    const map = new Map();
+    for (let value of this.datesOfAnswer()) {
+      map.set(value,this.answer.articles.reduce((count,current) => {
+        if (current.publishedAt.indexOf(value)+1) {
+          return ++count;
+        }
+        return count;
+      },0))
+    };
+    return [...map.entries()].sort();
   }
 
+  countHeadlines = () => this.answer.articles.reduce((count,current) => {
+        if  (current.title.indexOf(this.request)+1) return ++count;
+        return count;
+    },0);
 
 
 
-  addTextTitle(text) {
+
+  addText(block,text) {
     var newtext = document.createTextNode(text);
-    this.title.appendChild(newtext);
+    block.appendChild(newtext);
   }
-
-
 }
 
 const a = new Analitics();

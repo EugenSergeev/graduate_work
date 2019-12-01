@@ -16,7 +16,6 @@ export class Api {
     } else {
       tempString = `${this.url}${endPoints}?q=${request}&apiKey=${this.apiKey}&pageSize=100`;
     }
-    //l(tempString);
     return fetch(tempString)
       .then(res => this.checkRes(res))
       .catch(err => this.alertError(err))

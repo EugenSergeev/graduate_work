@@ -1,4 +1,3 @@
-export const l = (text) => console.log(text);
 import { Api } from './api';
 import { CardList } from './cardlist';
 import { dates } from './dates';

@@ -1,6 +1,3 @@
-
-const l = (text) => console.log(text);
-
 import {dates} from './dates';
 
 export class Api {

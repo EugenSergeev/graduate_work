@@ -1,4 +1,3 @@
-import {l} from './script'
 import {dates} from './dates';
 
 export class Card {

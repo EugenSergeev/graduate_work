@@ -1,5 +1,3 @@
-const l = (text) => console.log(text);
-
 class Dates {
   constructor() {
   }
@@ -8,8 +6,22 @@ class Dates {
 
   daysAgo = (dayTo,days) => new Date(dayTo.getFullYear(), dayTo.getMonth(), dayTo.getDate() - days);
 
+  analiticsFormat = (date) => {
+    return `${new Date(date).getDate()}, ${this.nameDay(new Date(date).getDay())}`;
 
+  }
 
+  nameDay = (n) => {
+    switch (n) {
+      case 1: return 'пн'
+      case 2: return 'вт'
+      case 3: return 'ср'
+      case 4: return 'чт'
+      case 5: return 'пт'
+      case 6: return 'сб'
+      case 0: return 'вс'
+    }
+  }
   newsApiFormat = (date) => {
     var dd = date.getDate();
     var mm = date.getMonth() + 1;

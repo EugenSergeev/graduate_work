@@ -1,5 +1,3 @@
-const l = (text) => console.log(text);
-
 import { dates } from './dates';
 
 class Analitics {
@@ -19,13 +17,14 @@ class Analitics {
   showAnalitics = () => {
     this.addText(this.totalNews,this.answer.articles.length);
     this.addText(this.topHeadlines,this.countHeadlines());
-    l(this.datesAndCounts);
     this.countsOfSheets();
   }
 
   countsOfSheets = () => {
     for (let i = 0; i<7 ; i++) {
-      this.addText(this.datesOfSheets[i],dates.analiticsFormat(this.datesAndCounts[i][0]));
+      this.addText(this.datesOfSheets[i], dates.analiticsFormat(Date.parse(this.datesAndCounts[i][0])));
+      this.addText(this.counts[i], this.datesAndCounts[i][1]);
+      this.counts[i].setAttribute("style",`width:${this.datesAndCounts[i][1]}%`)
     }
   }
 

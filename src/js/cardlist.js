@@ -1,5 +1,5 @@
 import {Card} from './card';
-import { l,search } from './script';
+import { search } from './script';
 
 export class CardList {
   constructor(container, resJson) {

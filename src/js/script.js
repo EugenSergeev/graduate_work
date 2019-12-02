@@ -71,7 +71,7 @@ class Search {
     this.showBlock(this.preloader);
     this.newsApi.newsApiRequest(this.string.value, dates.now(), dates.daysAgo(dates.now(),6)).then(resJson => {
       this.hideBlock(this.preloader);
-      this.saveStorage(this.string.value, JSON.stringify(resJson));
+      this.saveStorage(this.string.value, JSON.stringify(resJson),dates.now());
       if (resJson.articles.length) {
         this.cardList = new CardList(document.querySelector('.content__container'), resJson);
         this.cardList.showThreeCards();
@@ -93,8 +93,9 @@ class Search {
     this.hideBlock(this.moreCardButton);
   }
 
-  saveStorage = (request, answer) => {
+  saveStorage = (request, answer, date) => {
     localStorage.setItem('request', request);
+    sessionStorage.setItem('date', date);
     sessionStorage.setItem('request', request);
     sessionStorage.setItem('answer', answer);
   }

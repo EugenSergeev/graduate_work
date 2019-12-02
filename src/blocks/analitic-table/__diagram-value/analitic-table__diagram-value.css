@@ -9,6 +9,6 @@
   color: #FFFFFF;
   background: #2F71E5;
   padding-left: 6px;
-  width: 38%;
+  min-width: 10px;
   height: 24px;
 }

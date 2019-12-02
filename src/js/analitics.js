@@ -4,6 +4,8 @@ class Analitics {
   constructor() {
     this.request = sessionStorage.request;
     this.answer = JSON.parse(sessionStorage.answer);
+    this.dateTo = new Date(Date.parse(sessionStorage.date));
+    console.log(this.dateTo);
     this.title = document.querySelector('.analitics-header__request');
     this.totalNews = document.querySelector('.analitics-header__totalNews');
     this.topHeadlines = document.querySelector('.analitics-header__topHeadlines');
@@ -28,13 +30,13 @@ class Analitics {
     }
   }
 
-  datesOfAnswer = () => new Set(this.answer.articles.map((current) => current.publishedAt.substr(0,10)));
+  //datesOfAnswer = () => new Set(this.answer.articles.map((current) => current.publishedAt.substr(0,10)));
 
   countOfDays = () => {
     const map = new Map();
-    for (let value of this.datesOfAnswer()) {
-      map.set(value,this.answer.articles.reduce((count,current) => {
-        if (current.publishedAt.indexOf(value)+1) {
+    for (let i = 0; i < 7; i++) {
+      map.set(dates.newsApiFormat(dates.daysAgo(this.dateTo,i)),this.answer.articles.reduce((count,current) => {
+        if (current.publishedAt.indexOf(dates.newsApiFormat(dates.daysAgo(this.dateTo,i)))+1) {
           return ++count;
         }
         return count;

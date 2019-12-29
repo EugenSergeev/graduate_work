@@ -25,7 +25,7 @@ export class Card {
                             <p class="content__text">${this.text}</p>
                             <a target="_blank" href="${this.link}" class="content__item-link">${this.source}</a>
                           </div>`;
-    var tempElement = document.createElement("div");
+    const tempElement = document.createElement("div");
     tempElement.insertAdjacentHTML('beforeend', templateCard.trim());
     return tempElement.firstChild;
 }

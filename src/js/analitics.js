@@ -2,9 +2,9 @@ import { dates } from './dates';
 
 class Analitics {
   constructor() {
-    this.request = sessionStorage.request;
-    this.answer = JSON.parse(sessionStorage.answer);
-    this.dateTo = new Date(Date.parse(sessionStorage.date));
+    this.request = localStorage.request;
+    this.answer = JSON.parse(localStorage.answer);
+    this.dateTo = new Date(Date.parse(localStorage.date));
     console.log(this.dateTo);
     this.title = document.querySelector('.analitics-header__request');
     this.totalNews = document.querySelector('.analitics-header__totalNews');
@@ -54,9 +54,9 @@ class Analitics {
 
 
   addText(block,text) {
-    var newtext = document.createTextNode(text);
+    const newtext = document.createTextNode(text);
     block.appendChild(newtext);
   }
 }
 
-const a = new Analitics();
+const runPage = new Analitics();

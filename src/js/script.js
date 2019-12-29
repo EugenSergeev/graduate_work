@@ -95,9 +95,9 @@ class Search {
 
   saveStorage = (request, answer, date) => {
     localStorage.setItem('request', request);
-    sessionStorage.setItem('date', date);
+    localStorage.setItem('date', date);
     sessionStorage.setItem('request', request);
-    sessionStorage.setItem('answer', answer);
+    localStorage.setItem('answer', answer);
   }
 };
 

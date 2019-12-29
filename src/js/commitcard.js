@@ -4,16 +4,11 @@ export class CommitCard {
   constructor(commit) {
     this.avatarUrl = commit.author.avatar_url;
     this.author = commit.commit.author.name;
-    this.date = commit.commit.author.date;
+    this.date = dates.cardsFormat(Date.parse(commit.commit.author.date));
     this.text = commit.commit.message;
     this.link = commit.html_url;
     this.email = commit.commit.author.email;
     this.element = null;
-  }
-
-  render = () => {
-    this.element = this.createCard();
-    this.container.appendChild(this.element);
   }
 
   createCard = () => {

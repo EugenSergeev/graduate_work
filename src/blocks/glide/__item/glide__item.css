@@ -5,6 +5,8 @@
   border-radius: 16px;
   padding: 16px;
 
+  text-decoration: none;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 48px 1fr;
   grid-template-rows: auto 24px 24px 134px;

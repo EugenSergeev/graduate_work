@@ -11,7 +11,7 @@ const gitHubApi = new Api().gitHubCommits().then(resJson => {
     const commit_card = new CommitCard(resJson[i]);
     commits.addCommit(commit_card.createCard())
   };
-})
+}).catch(err => alert(`Ошибка: ${err.status} - ${err.statusText}.\nВозможно есть проблемы с соединением`))
 .finally(resJson =>{
   const swiper = new Swiper('.swiper-container', {
     effect: 'coverflow',

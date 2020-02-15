@@ -69,9 +69,9 @@ class Search {
     this.hideBlock(this.noresult);
     this.hideBlock(this.content);
     this.showBlock(this.preloader);
-    this.newsApi.newsApiRequest(this.string.value, dates.now(), dates.daysAgo(dates.now(),6)).then(resJson => {
+    this.newsApi.newsApiRequest(this.string.value, dates.now(), dates.daysAgo(dates.now(), 6)).then(resJson => {
       this.hideBlock(this.preloader);
-      this.saveStorage(this.string.value, JSON.stringify(resJson),dates.now());
+      this.saveStorage(this.string.value, JSON.stringify(resJson), dates.now());
       if (resJson.articles.length) {
         this.cardList = new CardList(document.querySelector('.content__container'), resJson);
         this.cardList.showThreeCards();
@@ -79,10 +79,8 @@ class Search {
         this.moreCardButton.addEventListener('click', this.cardList.showThreeCards);
       } else {
         this.showBlock(this.noresult);
-
       }
-    });
-
+    }).catch(err => alert(`Ошибка: ${err.status} - ${err.statusText}.\nВозможно есть проблемы с соединением`));
   }
 
   showMoreButton = () => {

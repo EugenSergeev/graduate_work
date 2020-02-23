@@ -4,7 +4,7 @@ class Dates {
 
   now = () => new Date();
 
-  daysAgo = (dayTo,days) => new Date(dayTo.getFullYear(), dayTo.getMonth(), dayTo.getDate() - days);
+  daysAgo = (dayTo, days) => new Date(dayTo.getFullYear(), dayTo.getMonth(), dayTo.getDate() - days);
 
   analiticsFormat = (date) => {
     return `${new Date(date).getDate()}, ${this.nameDay(new Date(date).getDay())}`;
@@ -36,7 +36,7 @@ class Dates {
 
   cardsFormat = (dateMs) => {
     const date = new Date(dateMs);
-    return `${date.toLocaleString('ru', {month: 'long',day: 'numeric'})}, ${date.getFullYear()}`;
+    return `${date.toLocaleString('ru', { month: 'long', day: 'numeric' })}, ${date.getFullYear()}`;
   }
 }
 

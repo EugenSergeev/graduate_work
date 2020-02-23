@@ -4,7 +4,7 @@ export class Api {
   constructor() {
     this.apiKey = 'e5eaab959f5c432780b91b754fa7cab6';
     this.urlNews = 'https://newsapi.org/v2/';
-    this.urlGitHub = 'https:api.github.com/repos/';
+    this.urlGitHub = 'https://api.github.com/repos/';
   }
 
   gitHubCommits = (login = 'EugenSergeev', reposit = 'graduate_work') => {
@@ -34,15 +34,10 @@ export class Api {
   }
 
   checkRes(res) {
-    if (res.ok) {console.log('ok');return res.json();}
+    if (res.ok) {
+      console.log('ok');
+      return res.json();
+    }
     return Promise.reject(res);
   }
 }
-/*
-https://newsapi.org/v2/everything?q=bitcoin&apiKey=e5eaab959f5c432780b91b754fa7cab6
-https://newsapi.org/v2/top-headlines?country=us&apiKey=e5eaab959f5c432780b91b754fa7cab6
-
-https://newsapi.org/v2/top-headlines?q=trump&apiKey=e5eaab959f5c432780b91b754fa7cab6
-https://newsapi.org/v2/top-headlines?q=Свадьба&apiKey=e5eaab959f5c432780b91b754fa7cab6&pageSize=100
-https://newsapi.org/v2/top-headlines?q=Свадьба&excludeDomains=lifehacker.ru&apiKey=e5eaab959f5c432780b91b754fa7cab6&from=2019-11-24&to=2019-12-01&pageSize=100
-*/
